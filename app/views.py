@@ -113,3 +113,7 @@ def delete_user(user_id):
     db.session.commit()
     flash('User deleted successfully', 'info')
     return redirect(url_for('admin'))
+
+@app.route( "/incidents" )
+def incidents():
+  return render_template( "incidents.html" )
